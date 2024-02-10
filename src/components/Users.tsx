@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import './Users.scss';
+
 interface User {
   id: number;
   name: string;
@@ -30,10 +32,10 @@ const Users = () => {
 
   return (
     <div>
-      <h1>Users and Their Addresses</h1>
-      <ul>
+      <h1 className="text-center">Users and Their Addresses</h1>
+      <ul className="UserList">
         {users.map((user) => (
-          <li key={user.id}>
+          <li className="User" key={user.id}>
             {user.name} - {user.address.street}, {user.address.suite},{' '}
             {user.address.city}, {user.address.zipcode}
           </li>
