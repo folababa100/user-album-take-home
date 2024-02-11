@@ -12,7 +12,7 @@ interface User {
   };
 }
 
-const useUsers = () => {
+export const useUsers = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
   const [albums, setAlbums] = useState([]);
@@ -47,5 +47,3 @@ const useUsers = () => {
 
   return { users, selectedUserId, setSelectedUserId, albums };
 };
-
-export default useUsers;
