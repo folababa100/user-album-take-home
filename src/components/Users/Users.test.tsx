@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, Mocked, vi } from 'vitest';
 import axios from 'axios';
-import Users from './Users';
+import Users from '.';
 
 vi.mock('axios');
 const mockedAxios = axios as Mocked<typeof axios>;
